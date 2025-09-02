@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Reusable buttons via Tailwind's @apply */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg px-6 py-3
+         font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600
+         shadow-lg shadow-blue-500/25 transition-all duration-200
+         hover:scale-[1.02] hover:shadow-xl active:scale-95
+         focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300;
+}
+
+/* Subtle outlined/ghost button */
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-lg px-6 py-3
+         font-semibold text-blue-700 bg-white/90 backdrop-blur
+         border border-blue-200 shadow-sm
+         transition-all duration-200 hover:bg-white hover:shadow-md
+         active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200;
+}
+
+/* Fancy “shine” sweep on hover */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* keeps the shine inside */
+}
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: -150% -20%;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.45) 40%, transparent 60%);
+  transform: translateX(-100%);
+}
+.btn-shimmer:hover::after {
+  animation: shine 900ms ease-in-out forwards;
+}
+@keyframes shine {
+  to { transform: translateX(100%); }
+}
