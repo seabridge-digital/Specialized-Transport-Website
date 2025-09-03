@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,33 +52,35 @@ export default function RootLayout({
         <header className="absolute top-0 left-0 w-full z-50">
   <div className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
     {/* Left side: site title (hidden on mobile) */}
-    <a href="/" className="hidden md:block text-2xl font-bold text-white drop-shadow">
+    <Link href="/" className="hidden md:block text-2xl font-bold text-white drop-shadow">
       Specialized Transport
-    </a>
+    </Link>
 
     {/* Center: logo */}
-    <a href="/" className="flex items-center">
-      <img
+    <Link href="/" className="flex items-center">
+      <Image
         src="/ST-logo-only-svg.svg"
         alt="Specialized Transport Logo"
+        width={56}
+        height={56}
         className="h-10 w-auto md:h-14 drop-shadow"
       />
-    </a>
+    </Link>
 
     {/* Right side: nav links */}
     <nav className="hidden md:flex gap-6 text-sm md:text-base font-medium">
-      <a href="/" className="text-white hover:text-sky-300 transition-colors">
+      <Link href="/" className="text-white hover:text-sky-300 transition-colors">
         Home
-      </a>
-      <a href="/services" className="text-white hover:text-sky-300 transition-colors">
+      </Link>
+      <Link href="/services" className="text-white hover:text-sky-300 transition-colors">
         Services
-      </a>
-      <a href="/about" className="text-white hover:text-sky-300 transition-colors">
+      </Link>
+      <Link href="/about" className="text-white hover:text-sky-300 transition-colors">
         About
-      </a>
-      <a href="/contact" className="text-white hover:text-sky-300 transition-colors">
+      </Link>
+      <Link href="/contact" className="text-white hover:text-sky-300 transition-colors">
         Contact
-      </a>
+      </Link>
     </nav>
     <button className="md:hidden text-white focus:outline-none">
       ☰
