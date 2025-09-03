@@ -19,12 +19,12 @@ export default function Home() {
   return (
     <main className={`relative flex flex-col items-center justify-center bg-gray-50 ${playfair.variable} ${inter.variable}`}>
       {/* HEADER / NAVIGATION */}
-      <header className="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+      <header className="w-full fixed top-0 left-0 z-50 bg-transparent">
         <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16 relative">
-          <Link href="/" className={`text-xl font-bold text-sky-700 ${playfair.variable}`}>Specialized Transport</Link>
+          {/* Removed company title from header */}
           <div className="hidden sm:flex gap-8">
             <Link href="/" className="text-gray-700 hover:text-sky-600">Home</Link>
-            <Link href="#services" className="text-gray-700 hover:text-sky-600">Services</Link>
+            <Link href="/services" className="text-gray-700 hover:text-sky-600">Services</Link>
             <Link href="#about" className="text-gray-700 hover:text-sky-600">About</Link>
             <Link href="#contact" className="text-gray-700 hover:text-sky-600">Contact</Link>
           </div>
@@ -40,7 +40,7 @@ export default function Home() {
           {menuOpen && (
             <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 sm:hidden">
               <Link href="/" className="text-gray-700" onClick={() => setMenuOpen(false)}>Home</Link>
-              <Link href="#services" className="text-gray-700" onClick={() => setMenuOpen(false)}>Services</Link>
+              <Link href="/services" className="text-gray-700" onClick={() => setMenuOpen(false)}>Services</Link>
               <Link href="#about" className="text-gray-700" onClick={() => setMenuOpen(false)}>About</Link>
               <Link href="#contact" className="text-gray-700" onClick={() => setMenuOpen(false)}>Contact</Link>
             </div>
