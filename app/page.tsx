@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
+import { useState } from "react";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,8 +14,39 @@ const inter = Inter({
 });
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className={`relative flex flex-col items-center justify-center bg-gray-50 ${playfair.variable} ${inter.variable}`}>
+      {/* HEADER / NAVIGATION */}
+      <header className="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+        <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16 relative">
+          <Link href="/" className={`text-xl font-bold text-sky-700 ${playfair.variable}`}>Specialized Transport</Link>
+          <div className="hidden sm:flex gap-8">
+            <Link href="/" className="text-gray-700 hover:text-sky-600">Home</Link>
+            <Link href="#services" className="text-gray-700 hover:text-sky-600">Services</Link>
+            <Link href="#about" className="text-gray-700 hover:text-sky-600">About</Link>
+            <Link href="#contact" className="text-gray-700 hover:text-sky-600">Contact</Link>
+          </div>
+          <button
+            className="sm:hidden flex items-center justify-center p-2 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
+            aria-label="Toggle menu"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d={!menuOpen ? "M4 6h16M4 12h16M4 18h16" : "M6 18L18 6M6 6l12 12"} />
+            </svg>
+          </button>
+          {menuOpen && (
+            <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 sm:hidden">
+              <Link href="/" className="text-gray-700" onClick={() => setMenuOpen(false)}>Home</Link>
+              <Link href="#services" className="text-gray-700" onClick={() => setMenuOpen(false)}>Services</Link>
+              <Link href="#about" className="text-gray-700" onClick={() => setMenuOpen(false)}>About</Link>
+              <Link href="#contact" className="text-gray-700" onClick={() => setMenuOpen(false)}>Contact</Link>
+            </div>
+          )}
+        </nav>
+      </header>
+      <div className="h-16" /> {/* Spacer for fixed header */}
       {/* Decorative background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_0%,rgba(14,165,233,0.10),rgba(255,255,255,0)_60%)]" />
@@ -36,7 +68,7 @@ export default function Home() {
 
         {/* Foreground content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 w-full max-w-5xl mx-auto text-center">
-          <h1 className={`animate-fadeIn text-4xl sm:text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg text-center leading-tight md:leading-snug mb-4 ${playfair.variable}`}>
+          <h1 className={`animate-fadeIn text-3xl sm:text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg text-center leading-tight md:leading-snug mb-4 break-words ${playfair.variable}`}>
             Specialized Transport
           </h1>
           <h2 className={`animate-fadeIn opacity-0 [animation-delay:0.2s] mt-2 text-xl sm:text-2xl md:text-3xl font-semibold text-white/90 text-center leading-snug mb-4 ${inter.variable}`}>
@@ -199,7 +231,7 @@ export default function Home() {
               <h4 className={`font-semibold ${inter.variable}`}>Long‑Distance Clients</h4>
               <p className="mt-2 text-gray-600">Safe and insured transport for moves beyond the Southeast.</p>
             </div>
-          </div>s
+          </div>
         </div>
       </section>
 
