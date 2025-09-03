@@ -1,8 +1,19 @@
 import Image from "next/image";
+import { Playfair_Display, Inter } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col items-center justify-center bg-gray-50">
+    <main className={`relative flex flex-col items-center justify-center bg-gray-50 ${playfair.variable} ${inter.variable}`}>
       {/* Decorative background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_0%,rgba(14,165,233,0.10),rgba(255,255,255,0)_60%)]" />
@@ -12,48 +23,77 @@ export default function Home() {
       <section className="relative w-full h-[70vh] overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
-          {/* If you prefer CSS bg-image, you can do it in CSS. This uses Next/Image for performance */}
-          
           <img
             src="/hero.jpg"
             alt="Ford F-250 hauling trailer on highway"
             className="w-full h-full object-cover"
             loading="eager"
           />
-          {/* Dark overlay for readable text */}
-          <div className="absolute inset-0 bg-black/50" />
+          {/* Gradient overlay for better readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent" />
         </div>
 
         {/* Foreground content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-md">
-            Savannah, GA Equipment Hauling & Transport
+          <h1 className={`animate-fadeIn text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg ${playfair.variable}`}>
+            Specialized Transport
           </h1>
-          <p className="mt-4 max-w-2xl text-white/90 text-base md:text-lg">
-            Local and long‑distance moves at competitive rates. Custom‑built trailers for tall and oversized warehouse equipment.
-          </p>
+          <h2 className={`animate-fadeIn opacity-0 [animation-delay:0.2s] mt-2 text-2xl md:text-3xl font-semibold text-white/90 ${inter.variable}`}>
+            Equipment Moving
+          </h2>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href="#contact" className="btn-primary btn-shimmer">
-              Get a Quote
+            <a
+              href="tel:4054136077"
+              className="px-6 py-3 rounded-lg bg-sky-600 text-white font-semibold shadow hover:bg-sky-700 transition"
+            >
+              Call Now to Schedule
             </a>
-            <a href="tel:1234567890" className="btn-ghost">
-              Call Now
+            <a
+              href="mailto:spcialized.transport@yahoo.com"
+              className="px-6 py-3 rounded-lg bg-white/10 text-white font-semibold shadow hover:bg-white/20 transition"
+            >
+              Email to Book
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-lg border border-white text-white font-semibold hover:bg-white hover:text-black transition"
+            >
+              Contact Us
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-xs text-white/80">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 14l6-6-1.5-1.5L11 12.5 8.5 10 7 11.5 11 15z"/></svg>Fully insured</span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"/></svg>DOT compliant</span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M12 2C8.1 2 5 5.1 5 9c0 6 7 13 7 13s7-7 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>Savannah & Southeast</span>
+          <a href="#contact" className="mt-2 text-sm text-white/80 underline hover:text-white transition">
+            Request a Free Quote →
+          </a>
+
+          <div className="animate-fadeIn opacity-0 [animation-delay:0.6s] mt-6 flex flex-wrap items-center justify-center gap-3 text-xs text-white/80">
+            <span className={`inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur ${inter.variable}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 14l6-6-1.5-1.5L11 12.5 8.5 10 7 11.5 11 15z"/></svg>
+              Fully insured
+            </span>
+            <span className={`inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur ${inter.variable}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"/></svg>
+              DOT compliant
+            </span>
+            <span className={`inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur ${inter.variable}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M12 2C8.1 2 5 5.1 5 9c0 6 7 13 7 13s7-7 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              Savannah & Southeast
+            </span>
           </div>
         </div>
       </section>
 
+      <div className="relative w-full h-16 bg-gray-50">
+        <svg className="absolute inset-0 w-full h-full text-white" preserveAspectRatio="none" viewBox="0 0 100 100">
+          <polygon fill="currentColor" points="0,100 100,0 100,100"/>
+        </svg>
+      </div>
+
       {/* SERVICES */}
       <section id="services" className="w-full bg-white">
         <div className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">Warehouse & Equipment Hauling Services</h2>
-          <p className="mt-3 text-center text-gray-600 max-w-3xl mx-auto">
+          <h2 className={`text-3xl md:text-4xl font-bold text-center ${playfair.variable}`}>Warehouse & Equipment Hauling Services</h2>
+          <p className={`mt-3 text-center text-gray-600 max-w-3xl mx-auto ${inter.variable}`}>
             Specialists in reach trucks, order pickers, forklifts, and anything that legally fits size and weight on our trailers.
           </p>
 
@@ -67,8 +107,11 @@ export default function Home() {
                   height={80}
                   className="object-contain mx-auto mb-4 h-20 w-20"
                 />
-                <h3 className="text-lg font-semibold">Reach Trucks</h3>
-                <p className="mt-2 text-gray-600">Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
+                <h3 className={`text-lg font-semibold ${inter.variable}`}>Reach Trucks</h3>
+                <p className={`mt-2 text-gray-600 ${inter.variable}`}>Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
+                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                  Schedule Pickup →
+                </a>
               </div>
             </div>
 
@@ -81,8 +124,11 @@ export default function Home() {
                   height={80}
                   className="object-contain mx-auto mb-4 h-20 w-20"
                 />
-                <h3 className="text-lg font-semibold">Order Pickers</h3>
-                <p className="mt-2 text-gray-600">Experienced handling of elevated platforms and mast clearances.</p>
+                <h3 className={`text-lg font-semibold ${inter.variable}`}>Order Pickers</h3>
+                <p className={`mt-2 text-gray-600 ${inter.variable}`}>Experienced handling of elevated platforms and mast clearances.</p>
+                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                  Schedule Pickup →
+                </a>
               </div>
             </div>
 
@@ -95,8 +141,11 @@ export default function Home() {
                   height={80}
                   className="object-contain mx-auto mb-4 h-20 w-20"
                 />
-                <h3 className="text-lg font-semibold">Forklifts & Pallet Equipment</h3>
-                <p className="mt-2 text-gray-600">From electric forklifts to pallet stackers — secured and compliant.</p>
+                <h3 className={`text-lg font-semibold ${inter.variable}`}>Forklifts & Pallet Equipment</h3>
+                <p className={`mt-2 text-gray-600 ${inter.variable}`}>From electric forklifts to pallet stackers — secured and compliant.</p>
+                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                  Schedule Pickup →
+                </a>
               </div>
             </div>
 
@@ -109,8 +158,11 @@ export default function Home() {
                   height={80}
                   className="object-contain mx-auto mb-4 h-20 w-20"
                 />
-                <h3 className="text-lg font-semibold">Custom Tall Loads</h3>
-                <p className="mt-2 text-gray-600">Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
+                <h3 className={`text-lg font-semibold ${inter.variable}`}>Custom Tall Loads</h3>
+                <p className={`mt-2 text-gray-600 ${inter.variable}`}>Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
+                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                  Schedule Pickup →
+                </a>
               </div>
             </div>
           </div>
@@ -120,24 +172,30 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
             <div className="rounded-xl bg-white/80 dark:bg-zinc-900/80 p-5 ring-1 ring-zinc-200 dark:ring-zinc-800">
               <div className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">01 — Request</div>
-              <p className="text-zinc-600 dark:text-zinc-400">Send make/model, pickup & drop-off, and timing. We reply fast with a clear quote.</p>
+              <p className={`text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>Send make/model, pickup & drop-off, and timing. We reply fast with a clear quote.</p>
             </div>
             <div className="rounded-xl bg-white/80 dark:bg-zinc-900/80 p-5 ring-1 ring-zinc-200 dark:ring-zinc-800">
               <div className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">02 — Secure</div>
-              <p className="text-zinc-600 dark:text-zinc-400">We pad, strap, and block equipment; height and weight verified for compliance.</p>
+              <p className={`text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>We pad, strap, and block equipment; height and weight verified for compliance.</p>
             </div>
             <div className="rounded-xl bg-white/80 dark:bg-zinc-900/80 p-5 ring-1 ring-zinc-200 dark:ring-zinc-800">
               <div className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">03 — Deliver</div>
-              <p className="text-zinc-600 dark:text-zinc-400">On-time delivery with photo confirmation and simple invoicing.</p>
+              <p className={`text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>On-time delivery with photo confirmation and simple invoicing.</p>
             </div>
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="#contact" className="btn-primary btn-shimmer">Request a Quote</a>
-            <span className="text-gray-500">Serving Savannah, GA • Local & long‑distance</span>
+            <span className={`text-gray-500 ${inter.variable}`}>Serving Savannah, GA • Local & long‑distance</span>
           </div>
         </div>
       </section>
+
+      <div className="relative w-full h-16 bg-white">
+        <svg className="absolute inset-0 w-full h-full text-gray-50" preserveAspectRatio="none" viewBox="0 0 100 100">
+          <polygon fill="currentColor" points="0,0 100,100 0,100"/>
+        </svg>
+      </div>
 
       <section id="about" className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
@@ -158,44 +216,77 @@ export default function Home() {
 
           {/* Text column */}
           <div className="order-1 md:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Specialized Transport — Savannah, GA</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${playfair.variable}`}>About Specialized Transport — Savannah, GA</h2>
+            <p className={`text-gray-700 leading-relaxed text-lg ${inter.variable}`}>
               Based in <strong>Savannah, Georgia</strong>, Specialized Transport provides safe and reliable hauling services for both local moves and long‑distance routes. Our <strong>custom‑built trailers</strong> are designed to accommodate tall and oversized equipment, ensuring every move is secure and efficient.
             </p>
-            <p className="mt-4 text-gray-700 leading-relaxed text-lg">
+            <p className={`mt-4 text-gray-700 leading-relaxed text-lg ${inter.variable}`}>
               We specialize in transporting <strong>reach trucks</strong>, <strong>order pickers</strong>, <strong>forklifts</strong>, and all types of <strong>warehouse equipment</strong>. If it can legally fit size and weight on our trailers, we’ll haul it — competitively priced and professionally handled.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-800">Insured</span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-800">DOT compliant</span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-800">Savannah & Southeast</span>
+              <span className={`inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-800 ${inter.variable}`}>Insured</span>
+              <span className={`inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-800 ${inter.variable}`}>DOT compliant</span>
+              <span className={`inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-800 ${inter.variable}`}>Savannah & Southeast</span>
             </div>
           </div>
         </div>
       </section>
 
+      <div className="relative w-full h-16 bg-gray-50">
+        <svg className="absolute inset-0 w-full h-full text-white" preserveAspectRatio="none" viewBox="0 0 100 100">
+          <polygon fill="currentColor" points="0,0 100,0 100,100"/>
+        </svg>
+      </div>
+
       <section className="relative isolate mx-auto w-full max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-tr from-sky-500/10 via-indigo-500/10 to-transparent px-6 py-10 ring-1 ring-zinc-200/70 dark:ring-zinc-800">
         <div className="absolute -inset-20 -z-10 bg-[radial-gradient(40%_40%_at_70%_0%,rgba(56,189,248,0.15),transparent)]" />
         <div className="mx-auto grid items-center gap-6 sm:grid-cols-3">
           <div className="sm:col-span-2">
-            <h3 className="text-xl font-semibold tracking-tight">Need a quote today?</h3>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Same‑day responses for Savannah area pickups. We also handle regional moves across the Southeast.</p>
+            <h3 className={`text-xl font-semibold tracking-tight ${inter.variable}`}>Ready to Schedule?</h3>
+            <p className={`mt-1 text-sm text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>
+              Call today for same-day scheduling in Savannah. Quotes available on request.
+            </p>
           </div>
-          <div className="flex justify-start sm:justify-end">
-            <a href="#contact" className="inline-flex items-center rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow hover:bg-zinc-800 dark:bg-white dark:text-zinc-900">Request a Quote →</a>
+          <div className="flex flex-wrap justify-start sm:justify-end gap-3">
+            <a
+              href="tel:4054136077"
+              className="px-6 py-3 rounded-lg bg-sky-600 text-white font-semibold shadow hover:bg-sky-700 transition"
+            >
+              Call Now
+            </a>
+            <a
+              href="mailto:spcialized.transport@yahoo.com"
+              className="px-6 py-3 rounded-lg bg-white/10 text-white font-semibold shadow hover:bg-white/20 transition"
+            >
+              Email Us
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-lg border border-white text-white font-semibold hover:bg-white hover:text-black transition"
+            >
+              Contact Us
+            </a>
           </div>
         </div>
       </section>
 
+      <div className="relative w-full h-16 bg-white">
+        <svg className="absolute inset-0 w-full h-full text-gray-50" preserveAspectRatio="none" viewBox="0 0 100 100">
+          <polygon fill="currentColor" points="0,100 100,0 100,100"/>
+        </svg>
+      </div>
+
       {/* CONTACT SECTION */}
       <section id="contact" className="w-full max-w-4xl px-6 py-16 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold">Get a Quote for Equipment Hauling</h2>
-        <p className="mt-2 text-gray-600">
-          Tell us what you need moved (make/model), pickup/drop‑off details, and timing. We’ll respond quickly with a competitive rate.
+        <h2 className={`text-2xl md:text-3xl font-semibold ${playfair.variable}`}>Book Your Equipment Move</h2>
+        <p className={`mt-2 text-gray-600 ${inter.variable}`}>
+          Call or email us directly to schedule. Need pricing first? Request a free quote below.
         </p>
-        <a href="mailto:info@specializedtransport.com" className="btn-primary mt-6 inline-flex">
-          Email Us
-        </a>
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
+          <a href="tel:4054136077" className="btn-primary inline-flex">Call Now</a>
+          <a href="mailto:spcialized.transport@yahoo.com" className="btn-ghost inline-flex">Email Us</a>
+          <a href="#quote" className="text-sm text-sky-600 hover:underline">Request Free Quote →</a>
+        </div>
       </section>
     </main>
   );
