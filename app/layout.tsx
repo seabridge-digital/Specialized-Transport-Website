@@ -47,7 +47,42 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <img src="/highway-truck.jpg" alt="Ford F-250 hauling trailer on highway" className="w-full h-auto" />
+        <header className="absolute top-0 left-0 w-full z-50">
+  <div className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+    {/* Left side: site title (hidden on mobile) */}
+    <a href="/" className="hidden md:block text-2xl font-bold text-white drop-shadow">
+      Specialized Transport
+    </a>
+
+    {/* Center: logo */}
+    <a href="/" className="flex items-center">
+      <img
+        src="/ST-logo-only-svg.svg"
+        alt="Specialized Transport Logo"
+        className="h-10 w-auto md:h-14 drop-shadow"
+      />
+    </a>
+
+    {/* Right side: nav links */}
+    <nav className="hidden md:flex gap-6 text-sm md:text-base font-medium">
+      <a href="/" className="text-white hover:text-sky-300 transition-colors">
+        Home
+      </a>
+      <a href="/services" className="text-white hover:text-sky-300 transition-colors">
+        Services
+      </a>
+      <a href="/about" className="text-white hover:text-sky-300 transition-colors">
+        About
+      </a>
+      <a href="/contact" className="text-white hover:text-sky-300 transition-colors">
+        Contact
+      </a>
+    </nav>
+    <button className="md:hidden text-white focus:outline-none">
+      ☰
+    </button>
+  </div>
+</header>
         {children}
       </body>
     </html>
