@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -57,12 +58,12 @@ export default function Home() {
             >
               Email to Book
             </a>
-            <a
+            <Link
               href="#contact"
               className="px-6 py-3 rounded-lg border border-white text-white font-semibold hover:bg-white hover:text-black hover:scale-105 transition"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
           <div className="animate-fadeIn opacity-0 [animation-delay:0.6s] mt-6 flex flex-wrap gap-3 text-xs text-white/80">
             <span className={`inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/15 backdrop-blur ${inter.variable}`}>
@@ -103,9 +104,9 @@ export default function Home() {
                 />
                 <h3 className={`text-lg font-semibold ${inter.variable}`}>Reach Trucks</h3>
                 <p className={`mt-2 text-base sm:text-lg text-gray-600 ${inter.variable}`}>Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
-                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                   Schedule Pickup →
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -120,9 +121,9 @@ export default function Home() {
                 />
                 <h3 className={`text-lg font-semibold ${inter.variable}`}>Order Pickers</h3>
                 <p className={`mt-2 text-base sm:text-lg text-gray-600 ${inter.variable}`}>Experienced handling of elevated platforms and mast clearances.</p>
-                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                   Schedule Pickup →
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -137,9 +138,9 @@ export default function Home() {
                 />
                 <h3 className={`text-lg font-semibold ${inter.variable}`}>Forklifts & Pallet Equipment</h3>
                 <p className={`mt-2 text-base sm:text-lg text-gray-600 ${inter.variable}`}>From electric forklifts to pallet stackers — secured and compliant.</p>
-                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                   Schedule Pickup →
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -154,9 +155,9 @@ export default function Home() {
                 />
                 <h3 className={`text-lg font-semibold ${inter.variable}`}>Custom Tall Loads</h3>
                 <p className={`mt-2 text-base sm:text-lg text-gray-600 ${inter.variable}`}>Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
-                <a href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
+                <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                   Schedule Pickup →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
