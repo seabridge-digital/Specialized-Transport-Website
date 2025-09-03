@@ -79,13 +79,9 @@ export default function Home() {
             </span>
           </div>
         </div>
+      {/* Bottom gradient fade into background */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-50" />
       </section>
-
-      <div className="relative w-full h-16 bg-gray-50">
-        <svg className="absolute inset-0 w-full h-full text-white" preserveAspectRatio="none" viewBox="0 0 100 100">
-          <polygon fill="currentColor" points="0,100 100,0 100,100"/>
-        </svg>
-      </div>
 
       {/* SERVICES */}
       <section id="services" className="w-full bg-gray-50">
@@ -167,32 +163,47 @@ export default function Home() {
 
           <hr className="mt-10 border-zinc-200/70 dark:border-zinc-800/60" />
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-xl bg-white/80 dark:bg-zinc-900/80 p-5 ring-1 ring-zinc-200 dark:ring-zinc-800">
-              <div className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">01 — Request</div>
-              <p className={`text-base sm:text-lg text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>Send make/model, pickup & drop-off, and timing. We reply fast with a clear quote.</p>
-            </div>
-            <div className="rounded-xl bg-white/80 dark:bg-zinc-900/80 p-5 ring-1 ring-zinc-200 dark:ring-zinc-800">
-              <div className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">02 — Secure</div>
-              <p className={`text-base sm:text-lg text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>We pad, strap, and block equipment; height and weight verified for compliance.</p>
-            </div>
-            <div className="rounded-xl bg-white/80 dark:bg-zinc-900/80 p-5 ring-1 ring-zinc-200 dark:ring-zinc-800">
-              <div className="mb-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200">03 — Deliver</div>
-              <p className={`text-base sm:text-lg text-zinc-600 dark:text-zinc-400 ${inter.variable}`}>On-time delivery with photo confirmation and simple invoicing.</p>
+          {/* Coverage Map Section */}
+          <div className="mt-16 text-center">
+            <h3 className={`text-2xl sm:text-3xl font-bold mb-6 ${playfair.variable}`}>Coverage Area</h3>
+            <div className="w-full max-w-4xl mx-auto">
+              <Image
+                src="/transport-coverage-map.svg"
+                alt="Coverage map showing strong presence in the Southeast with nationwide reach"
+                width={959}
+                height={593}
+                className="w-full h-auto mx-auto"
+                priority={false}
+              />
+              <p className={`mt-4 text-base sm:text-lg text-gray-600 ${inter.variable}`}>
+                Based in Savannah, GA — strong presence across the Southeast with long‑distance hauling available nationwide.
+              </p>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#contact" className="btn-primary btn-shimmer">Request a Quote</a>
-            <span className={`text-gray-500 ${inter.variable}`}>Serving Savannah, GA • Local & long‑distance</span>
-          </div>
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
+              <h4 className={`font-semibold ${inter.variable}`}>Warehouses</h4>
+              <p className="mt-2 text-gray-600">Forklifts, pallet jacks, and reach trucks for warehouse operations.</p>
+            </div>
+            <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
+              <h4 className={`font-semibold ${inter.variable}`}>Retail & Distribution</h4>
+              <p className="mt-2 text-gray-600">Order pickers and material handling equipment for retail supply chains.</p>
+            </div>
+            <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
+              <h4 className={`font-semibold ${inter.variable}`}>Construction</h4>
+              <p className="mt-2 text-gray-600">Custom trailers for tall loads and specialized industrial equipment.</p>
+            </div>
+            <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
+              <h4 className={`font-semibold ${inter.variable}`}>Long‑Distance Clients</h4>
+              <p className="mt-2 text-gray-600">Safe and insured transport for moves beyond the Southeast.</p>
+            </div>
+          </div>s
         </div>
       </section>
 
-      <div className="relative w-full h-16 bg-white">
-        <svg className="absolute inset-0 w-full h-full text-gray-50" preserveAspectRatio="none" viewBox="0 0 100 100">
-          <polygon fill="currentColor" points="0,0 100,100 0,100"/>
-        </svg>
+      <div className="relative w-full h-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white" />
       </div>
 
       <section id="about" className="w-full bg-white">
