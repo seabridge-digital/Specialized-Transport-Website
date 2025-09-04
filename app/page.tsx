@@ -102,8 +102,8 @@ export default function Home() {
       <section id="services" className="w-full bg-gray-50 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 ${playfair.variable}`}>Warehouse & Equipment Hauling Services</h2>
-            <p className={`mt-3 text-base sm:text-lg text-center text-gray-800 max-w-3xl mx-auto ${inter.variable}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center text-black ${playfair.variable}`}>Warehouse & Equipment Hauling Services</h2>
+          <p className={`mt-3 text-base sm:text-lg text-center text-black max-w-3xl mx-auto ${inter.variable}`}>
               Specialists in reach trucks, order pickers, forklifts, and anything that legally fits size and weight on our trailers.
             </p>
 
@@ -117,8 +117,8 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Reach Trucks</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
+                  <h3 className={`text-lg font-bold text-black ${inter.variable}`}>Reach Trucks</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-black ${inter.variable}`}>Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
@@ -134,8 +134,8 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Order Pickers</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>Experienced handling of elevated platforms and mast clearances.</p>
+                  <h3 className={`text-lg font-bold text-black ${inter.variable}`}>Order Pickers</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-black ${inter.variable}`}>Experienced handling of elevated platforms and mast clearances.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
@@ -151,8 +151,8 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Forklifts & Pallet Equipment</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>From electric forklifts to pallet stackers — secured and compliant.</p>
+                  <h3 className={`text-lg font-bold text-black ${inter.variable}`}>Forklifts & Pallet Equipment</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-black ${inter.variable}`}>From electric forklifts to pallet stackers — secured and compliant.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
@@ -168,8 +168,8 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Custom Tall Loads</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
+                  <h3 className={`text-lg font-bold text-black ${inter.variable}`}>Custom Tall Loads</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-black ${inter.variable}`}>Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
@@ -181,7 +181,7 @@ export default function Home() {
 
             {/* Coverage Map Section */}
             <div className="mt-16 text-center">
-              <h3 className={`text-2xl sm:text-3xl font-bold mb-6 text-gray-900 ${playfair.variable}`}>Coverage Area</h3>
+              <h3 className={`text-2xl sm:text-3xl font-bold mb-6 text-black ${playfair.variable}`}>Coverage Area</h3>
               <div className="w-full max-w-4xl mx-auto">
                 <Image
                   src="/transport-coverage-map.svg"
@@ -191,7 +191,7 @@ export default function Home() {
                   className="w-full h-auto mx-auto"
                   priority={false}
                 />
-                <p className={`mt-4 text-base sm:text-lg text-gray-800 ${inter.variable}`}>
+                <p className={`mt-4 text-base sm:text-lg text-black ${inter.variable}`}>
                   Based in Savannah, GA — strong presence across the Southeast with long‑distance hauling available nationwide.
                 </p>
               </div>
@@ -199,20 +199,20 @@ export default function Home() {
 
             <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Warehouses</h4>
-                <p className="mt-2 text-gray-800">Forklifts, pallet jacks, and reach trucks for warehouse operations.</p>
+                <h4 className={`font-bold text-black ${inter.variable}`}>Warehouses</h4>
+                <p className="mt-2 text-black">Forklifts, pallet jacks, and reach trucks for warehouse operations.</p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Retail & Distribution</h4>
-                <p className="mt-2 text-gray-800">Order pickers and material handling equipment for retail supply chains.</p>
+                <h4 className={`font-bold text-black ${inter.variable}`}>Retail & Distribution</h4>
+                <p className="mt-2 text-black">Order pickers and material handling equipment for retail supply chains.</p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Construction</h4>
-                <p className="mt-2 text-gray-800">Custom trailers for tall loads and specialized industrial equipment.</p>
+                <h4 className={`font-bold text-black ${inter.variable}`}>Construction</h4>
+                <p className="mt-2 text-black">Custom trailers for tall loads and specialized industrial equipment.</p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Long‑Distance Clients</h4>
-                <p className="mt-2 text-gray-800">Safe and insured transport for moves beyond the Southeast.</p>
+                <h4 className={`font-bold text-black ${inter.variable}`}>Long‑Distance Clients</h4>
+                <p className="mt-2 text-black">Safe and insured transport for moves beyond the Southeast.</p>
               </div>
             </div>
           </div>
@@ -244,11 +244,11 @@ export default function Home() {
 
               {/* Text column */}
               <div className="order-1 md:order-2">
-                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 ${playfair.variable}`}>About Specialized Transport — Savannah, GA</h2>
-                <p className={`text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed ${inter.variable}`}>
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black ${playfair.variable}`}>About Specialized Transport — Savannah, GA</h2>
+                <p className={`text-base sm:text-lg text-black leading-relaxed ${inter.variable}`}>
                   Based in <strong>Savannah, Georgia</strong>, Specialized Transport provides safe and reliable hauling services for both local moves and long‑distance routes. Our <strong>custom‑built trailers</strong> are designed to accommodate tall and oversized equipment, ensuring every move is secure and efficient.
                 </p>
-                <p className={`mt-4 text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed ${inter.variable}`}>
+                <p className={`mt-4 text-base sm:text-lg text-black leading-relaxed ${inter.variable}`}>
                   We specialize in transporting <strong>reach trucks</strong>, <strong>order pickers</strong>, <strong>forklifts</strong>, and all types of <strong>warehouse equipment</strong>. If it can legally fit size and weight on our trailers, we’ll haul it — competitively priced and professionally handled.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -272,10 +272,10 @@ export default function Home() {
       <section id="contact" className="w-full bg-gray-50 py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className={`text-2xl md:text-3xl font-semibold text-center text-gray-900 dark:text-gray-100 ${playfair.variable}`}>
+            <h2 className={`text-2xl md:text-3xl font-bold text-center text-black ${playfair.variable}`}>
               Schedule a Move or Request a Free Quote
             </h2>
-            <p className={`mt-2 text-base sm:text-lg text-gray-600 dark:text-gray-300 text-center ${inter.variable}`}>
+            <p className={`mt-2 text-base sm:text-lg text-black text-center ${inter.variable}`}>
               Fill out the form below and we’ll get back to you quickly with scheduling and pricing details.
             </p>
 
@@ -290,44 +290,44 @@ export default function Home() {
               <input type="hidden" name="_next" value="https://seabridge.digital/thanks" />
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Name</label>
-                <input type="text" name="name" required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                <label className="block text-sm font-medium text-black">Name</label>
+                <input type="text" name="name" required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Phone Number</label>
-                <input type="tel" name="phone" required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                <label className="block text-sm font-medium text-black">Phone Number</label>
+                <input type="tel" name="phone" required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Company (optional)</label>
-                <input type="text" name="company" className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                <label className="block text-sm font-medium text-black">Company (optional)</label>
+                <input type="text" name="company" className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Type(s) of Equipment</label>
-                <textarea name="equipment" rows={2} required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"></textarea>
+                <label className="block text-sm font-medium text-black">Type(s) of Equipment</label>
+                <textarea name="equipment" rows={2} required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black"></textarea>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Pickup Date</label>
-                  <input type="date" name="pickup_date" required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                  <label className="block text-sm font-medium text-black">Pickup Date</label>
+                  <input type="date" name="pickup_date" required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Drop-off Date</label>
-                  <input type="date" name="dropoff_date" required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                  <label className="block text-sm font-medium text-black">Drop-off Date</label>
+                  <input type="date" name="dropoff_date" required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Pickup Location</label>
-                  <input type="text" name="pickup_location" required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                  <label className="block text-sm font-medium text-black">Pickup Location</label>
+                  <input type="text" name="pickup_location" required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">Drop-off Location</label>
-                  <input type="text" name="dropoff_location" required className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" />
+                  <label className="block text-sm font-medium text-black">Drop-off Location</label>
+                  <input type="text" name="dropoff_location" required className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:border-sky-500 focus:ring-sky-500 bg-gray-100 text-black" />
                 </div>
               </div>
 
