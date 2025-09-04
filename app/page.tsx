@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -16,38 +16,19 @@ const inter = Inter({
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className={`relative flex flex-col items-center justify-center bg-gray-50 ${playfair.variable} ${inter.variable}`}>
-      {/* HEADER / NAVIGATION */}
-      <header className="w-full fixed top-0 left-0 z-50 bg-transparent">
-        <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16 relative">
-          {/* Removed company title from header */}
-          <div className="hidden sm:flex gap-8">
-            <Link href="/" className="text-gray-700 hover:text-sky-600">Home</Link>
-            <Link href="/services" className="text-gray-700 hover:text-sky-600">Services</Link>
-            <Link href="#about" className="text-gray-700 hover:text-sky-600">About</Link>
-            <Link href="#contact" className="text-gray-700 hover:text-sky-600">Contact</Link>
-          </div>
-          <button
-            className="sm:hidden flex items-center justify-center p-2 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
-            aria-label="Toggle menu"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <svg className="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d={!menuOpen ? "M4 6h16M4 12h16M4 18h16" : "M6 18L18 6M6 6l12 12"} />
-            </svg>
-          </button>
-          {menuOpen && (
-            <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 sm:hidden">
-              <Link href="/" className="text-gray-700" onClick={() => setMenuOpen(false)}>Home</Link>
-              <Link href="/services" className="text-gray-700" onClick={() => setMenuOpen(false)}>Services</Link>
-              <Link href="#about" className="text-gray-700" onClick={() => setMenuOpen(false)}>About</Link>
-              <Link href="#contact" className="text-gray-700" onClick={() => setMenuOpen(false)}>Contact</Link>
-            </div>
-          )}
-        </nav>
-      </header>
-      <div className="h-16" /> {/* Spacer for fixed header */}
+      {/* HEADER REMOVED */}
       {/* Decorative background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(65%_60%_at_50%_0%,rgba(14,165,233,0.10),rgba(255,255,255,0)_60%)]" />
@@ -113,8 +94,8 @@ export default function Home() {
             </span>
           </div>
         </div>
-      {/* Bottom gradient fade into background */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-50" />
+        {/* Bottom gradient fade into background */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-50" />
       </section>
 
       {/* SERVICES */}
@@ -287,7 +268,7 @@ export default function Home() {
       <section id="contact" className="w-full bg-gray-50 py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className={`text-2xl md:text-3xl font-semibold text-center ${playfair.variable}`}>
-            Request a Free Quote
+            Schedule a Move or Request a Free Quote
           </h2>
           <p className={`mt-2 text-base sm:text-lg text-gray-600 text-center ${inter.variable}`}>
             Fill out the form below and we’ll get back to you quickly with scheduling and pricing details.

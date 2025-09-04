@@ -1,93 +1,38 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
-import Image from "next/image";
-import "./globals.css";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-geist-sans",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
   title: "Specialized Transport | Savannah GA Hauling & Equipment Movers",
   description:
-    "Based in Savannah, GA, Specialized Transport provides local and long-distance hauling with custom trailers for tall warehouse equipment. Experts in moving reach trucks, order pickers, forklifts, and more — safely and competitively priced.",
-  keywords: [
-    "Savannah GA transport",
-    "equipment hauling",
-    "forklift movers",
-    "reach truck transport",
-    "order picker hauling",
-    "warehouse equipment transport",
-    "long distance hauling Savannah",
-    "custom trailer hauling"
-  ],
-  openGraph: {
-    title: "Specialized Transport | Savannah GA Hauling & Equipment Movers",
-    description:
-      "Hauling reach trucks, forklifts, and warehouse equipment with custom trailers. Serving Savannah, GA and beyond.",
-    url: "https://specializedtransportco.com", // replace with final domain
-    siteName: "Specialized Transport",
-    locale: "en_US",
-    type: "website",
-  },
+    "Based in Savannah, GA, Specialized Transport provides local and long-distance hauling with custom trailers for tall loads.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-gradient-to-b from-blue-50 via-white to-cyan-100 min-h-screen">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
       >
-        <header className="absolute top-0 left-0 w-full z-50">
-  <div className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
-    {/* Left side: site title (hidden on mobile) */}
-    <Link href="/" className="hidden md:block text-2xl font-bold text-white drop-shadow">
-      Specialized Transport
-    </Link>
-
-    {/* Center: logo */}
-    <Link href="/" className="flex items-center">
-      <Image
-        src="/ST-logo-only-svg.svg"
-        alt="Specialized Transport Logo"
-        width={56}
-        height={56}
-        className="h-10 w-auto md:h-14 drop-shadow"
-      />
-    </Link>
-
-    {/* Right side: nav links */}
-    <nav className="hidden md:flex gap-6 text-sm md:text-base font-medium">
-      <Link href="/" className="text-white hover:text-sky-300 transition-colors">
-        Home
-      </Link>
-      <Link href="/services" className="text-white hover:text-sky-300 transition-colors">
-        Services
-      </Link>
-      <Link href="/about" className="text-white hover:text-sky-300 transition-colors">
-        About
-      </Link>
-      <Link href="/contact" className="text-white hover:text-sky-300 transition-colors">
-        Contact
-      </Link>
-    </nav>
-    <button className="md:hidden text-white focus:outline-none">
-      ☰
-    </button>
-  </div>
-</header>
-        {children}
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
