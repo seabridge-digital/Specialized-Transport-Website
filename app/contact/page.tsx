@@ -30,12 +30,14 @@ export default function ContactPage() {
         <div className="bg-white rounded-2xl shadow-lg p-10 text-center">
           <h2 className="text-2xl font-semibold mb-2 text-gray-900">Email Us</h2>
           <p className="text-gray-700 mb-4">For quotes, scheduling, or general questions, send us an email.</p>
-          <a
-            href="mailto:spcialized.transport@yahoo.com"
-            className="inline-block px-8 py-3 rounded-lg bg-gray-200 text-gray-800 font-semibold shadow hover:bg-gray-300 transition mx-auto"
-          >
-            spcialized.transport@yahoo.com
-          </a>
+          <div className="flex justify-center">
+            <a
+              href="mailto:spcialized.transport@yahoo.com"
+              className="px-8 py-3 rounded-lg bg-gray-200 text-gray-800 font-semibold shadow hover:bg-gray-300 transition"
+            >
+              spcialized.transport@yahoo.com
+            </a>
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-10">
