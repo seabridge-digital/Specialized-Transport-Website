@@ -22,8 +22,8 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services</h1>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-gray-100">Our Services</h1>
+          <p className="text-lg text-gray-200 dark:text-gray-300 max-w-2xl mx-auto">
             Specialized Transport offers safe, reliable hauling for warehouse and industrial equipment across the Southeast and beyond.
           </p>
         </div>
@@ -38,25 +38,25 @@ export default function ServicesPage() {
           >
             <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
               <Image src="/reach-truck-transportation-georgia.png" alt="Reach Trucks" width={400} height={250} className="rounded-lg mb-4 object-contain w-full h-[250px]" />
-              <h2 className="text-xl sm:text-2xl font-bold mb-3">Reach Trucks</h2>
-              <p className="text-sm sm:text-base text-gray-600 mb-4">Safe loading, securement, and transport for narrow-aisle reach trucks with tall mast securement.</p>
-              <Link href="/#contact" className="text-sky-600 font-semibold hover:underline">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-900 dark:text-gray-100">Reach Trucks</h2>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Safe loading, securement, and transport for narrow-aisle reach trucks with tall mast securement.</p>
+              <Link href="/#contact" className="text-sky-600 dark:text-sky-400 font-semibold hover:underline">
                 Schedule Pickup →
               </Link>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
               <Image src="/order-picker-transport-georgia.png" alt="Order Pickers" width={400} height={250} className="rounded-lg mb-4 object-contain w-full h-[250px]" />
-              <h2 className="text-xl sm:text-2xl font-bold mb-3">Order Pickers</h2>
-              <p className="text-sm sm:text-base text-gray-600 mb-4">Expert handling of elevated platforms and mast clearance for retail and warehouse operations.</p>
-              <Link href="/#contact" className="text-sky-600 font-semibold hover:underline">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-900 dark:text-gray-100">Order Pickers</h2>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Expert handling of elevated platforms and mast clearance for retail and warehouse operations.</p>
+              <Link href="/#contact" className="text-sky-600 dark:text-sky-400 font-semibold hover:underline">
                 Schedule Pickup →
               </Link>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
               <Image src="/pallet-jack-transport-savannah.png" alt="Forklifts & Pallet Equipment" width={400} height={250} className="rounded-lg mb-4 object-contain w-full h-[250px]" />
-              <h2 className="text-xl sm:text-2xl font-bold mb-3">Forklifts & Pallet Equipment</h2>
-              <p className="text-sm sm:text-base text-gray-600 mb-4">Transport for electric and propane forklifts, pallet stackers, and other heavy-duty warehouse equipment.</p>
-              <Link href="/#contact" className="text-sky-600 font-semibold hover:underline">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-900 dark:text-gray-100">Forklifts & Pallet Equipment</h2>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Transport for electric and propane forklifts, pallet stackers, and other heavy-duty warehouse equipment.</p>
+              <Link href="/#contact" className="text-sky-600 dark:text-sky-400 font-semibold hover:underline">
                 Schedule Pickup →
               </Link>
             </div>
@@ -68,9 +68,9 @@ export default function ServicesPage() {
                 height={350}
                 className="rounded-lg mb-4 object-contain w-full h-[250px]"
               />
-              <h2 className="text-xl sm:text-2xl font-bold mb-3">Custom Tall Loads</h2>
-              <p className="text-sm sm:text-base text-gray-600 mb-4">Specialized trailers for oversized and tall equipment with custom securement methods.</p>
-              <Link href="/#contact" className="text-sky-600 font-semibold hover:underline">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-900 dark:text-gray-100">Custom Tall Loads</h2>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Specialized trailers for oversized and tall equipment with custom securement methods.</p>
+              <Link href="/#contact" className="text-sky-600 dark:text-sky-400 font-semibold hover:underline">
                 Schedule Pickup →
               </Link>
             </div>
@@ -81,7 +81,7 @@ export default function ServicesPage() {
       {/* Coverage Map */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Coverage Area</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Coverage Area</h2>
           <Image 
             src="/transport-coverage-map.svg" 
             alt="Coverage Map" 
@@ -94,11 +94,11 @@ export default function ServicesPage() {
 
       {/* Final CTA */}
       <section className="text-center py-20 bg-gradient-to-r from-sky-600 to-sky-400 text-white">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Schedule?</h2>
-        <p className="text-base sm:text-lg mb-6">Call us today or request a free quote online. We’ll get your equipment moving safely and on time.</p>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white dark:text-gray-100">Ready to Schedule?</h2>
+        <p className="text-base sm:text-lg mb-6 text-gray-100 dark:text-gray-200">Call us today or request a free quote online. We’ll get your equipment moving safely and on time.</p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="tel:4054136077" className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-sky-700 font-semibold shadow hover:bg-gray-100">Call Now</Link>
-          <Link href="mailto:specialized.transport@yahoo.com" className="w-full sm:w-auto px-6 py-3 rounded-lg border border-white font-semibold hover:bg-white hover:text-sky-700">Email Us</Link>
+          <Link href="mailto:specialized.transport@yahoo.com" className="w-full sm:w-auto px-6 py-3 rounded-lg border border-white font-semibold hover:bg-white hover:text-sky-700 dark:hover:text-sky-800">Email Us</Link>
           <Link href="/#contact" className="w-full sm:w-auto px-6 py-3 rounded-lg bg-sky-700 text-white font-semibold shadow hover:bg-sky-800">Request Quote</Link>
         </div>
       </section>

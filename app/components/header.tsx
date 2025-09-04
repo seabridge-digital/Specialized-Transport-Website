@@ -42,16 +42,28 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="hover:text-blue-600">
+            <Link
+              href="/"
+              className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Home
             </Link>
-            <Link href="/services" className="hover:text-blue-600">
+            <Link
+              href="/services"
+              className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Services
             </Link>
-            <Link href="/about" className="hover:text-blue-600">
+            <Link
+              href="/about"
+              className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               About
             </Link>
-            <Link href="/contact" className="hover:text-blue-600">
+            <Link
+              href="/contact"
+              className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+            >
               Contact
             </Link>
           </nav>
@@ -83,10 +95,30 @@ export default function Header() {
           menuOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0 pointer-events-none"
         }`}
       >
-        <Link href="/" className="block hover:text-blue-600">Home</Link>
-        <Link href="/services" className="block hover:text-blue-600">Services</Link>
-        <Link href="/about" className="block hover:text-blue-600">About</Link>
-        <Link href="/contact" className="block hover:text-blue-600">Contact</Link>
+        <Link
+          href="/"
+          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+        >
+          Home
+        </Link>
+        <Link
+          href="/services"
+          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+        >
+          Services
+        </Link>
+        <Link
+          href="/about"
+          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+        >
+          About
+        </Link>
+        <Link
+          href="/contact"
+          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+        >
+          Contact
+        </Link>
       </div>
     </header>
   );
