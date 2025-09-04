@@ -32,7 +32,7 @@ export default function ContactPage() {
           <p className="text-gray-700 mb-4">For quotes, scheduling, or general questions, send us an email.</p>
           <a
             href="mailto:spcialized.transport@yahoo.com"
-            className="inline-block px-8 py-3 rounded-lg bg-gray-200 text-gray-800 font-semibold shadow hover:bg-gray-300 transition"
+            className="inline-block px-8 py-3 rounded-lg bg-gray-200 text-gray-800 font-semibold shadow hover:bg-gray-300 transition mx-auto"
           >
             spcialized.transport@yahoo.com
           </a>

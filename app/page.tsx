@@ -102,14 +102,14 @@ export default function Home() {
       <section id="services" className="w-full bg-gray-50 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-gray-100 ${playfair.variable}`}>Warehouse & Equipment Hauling Services</h2>
-            <p className={`mt-3 text-base sm:text-lg text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto ${inter.variable}`}>
+            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 ${playfair.variable}`}>Warehouse & Equipment Hauling Services</h2>
+            <p className={`mt-3 text-base sm:text-lg text-center text-gray-800 max-w-3xl mx-auto ${inter.variable}`}>
               Specialists in reach trucks, order pickers, forklifts, and anything that legally fits size and weight on our trailers.
             </p>
 
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800/60 h-full">
-                <div className="rounded-2xl bg-white/90 dark:bg-zinc-900/80 backdrop-blur shadow-sm ring-1 ring-zinc-100/60 dark:ring-zinc-800/70 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
+              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent h-full">
+                <div className="rounded-2xl bg-white backdrop-blur shadow-sm ring-1 ring-zinc-100/60 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
                   <Image
                     src="/reach-truck-transportation-georgia.png"
                     alt="Reach Trucks"
@@ -117,16 +117,16 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 dark:text-gray-100 ${inter.variable}`}>Reach Trucks</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-600 dark:text-gray-300 ${inter.variable}`}>Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
+                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Reach Trucks</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>Safe loading, securement, and transport for narrow‑aisle reach trucks.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
                 </div>
               </div>
 
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800/60 h-full">
-                <div className="rounded-2xl bg-white/90 dark:bg-zinc-900/80 backdrop-blur shadow-sm ring-1 ring-zinc-100/60 dark:ring-zinc-800/70 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
+              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent h-full">
+                <div className="rounded-2xl bg-white backdrop-blur shadow-sm ring-1 ring-zinc-100/60 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
                   <Image
                     src="/order-picker-transport-georgia.png"
                     alt="Order Pickers"
@@ -134,16 +134,16 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 dark:text-gray-100 ${inter.variable}`}>Order Pickers</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-600 dark:text-gray-300 ${inter.variable}`}>Experienced handling of elevated platforms and mast clearances.</p>
+                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Order Pickers</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>Experienced handling of elevated platforms and mast clearances.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
                 </div>
               </div>
 
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800/60 h-full">
-                <div className="rounded-2xl bg-white/90 dark:bg-zinc-900/80 backdrop-blur shadow-sm ring-1 ring-zinc-100/60 dark:ring-zinc-800/70 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
+              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent h-full">
+                <div className="rounded-2xl bg-white backdrop-blur shadow-sm ring-1 ring-zinc-100/60 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
                   <Image
                     src="/pallet-jack-transport-savannah.png"
                     alt="Forklifts & Pallet Equipment"
@@ -151,16 +151,16 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 dark:text-gray-100 ${inter.variable}`}>Forklifts & Pallet Equipment</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-600 dark:text-gray-300 ${inter.variable}`}>From electric forklifts to pallet stackers — secured and compliant.</p>
+                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Forklifts & Pallet Equipment</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>From electric forklifts to pallet stackers — secured and compliant.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
                 </div>
               </div>
 
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800/60 h-full">
-                <div className="rounded-2xl bg-white/90 dark:bg-zinc-900/80 backdrop-blur shadow-sm ring-1 ring-zinc-100/60 dark:ring-zinc-800/70 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
+              <div className="group rounded-2xl p-[1px] bg-gradient-to-b from-zinc-200 to-transparent h-full">
+                <div className="rounded-2xl bg-white backdrop-blur shadow-sm ring-1 ring-zinc-100/60 p-6 transition duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 h-full flex flex-col justify-between">
                   <Image
                     src="/forklift-transport-savannah-icon.png"
                     alt="Custom Tall Loads"
@@ -168,8 +168,8 @@ export default function Home() {
                     height={80}
                     className="object-contain mx-auto mb-4 h-20 w-20"
                   />
-                  <h3 className={`text-lg font-semibold text-gray-900 dark:text-gray-100 ${inter.variable}`}>Custom Tall Loads</h3>
-                  <p className={`mt-2 text-base sm:text-lg text-gray-600 dark:text-gray-300 ${inter.variable}`}>Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
+                  <h3 className={`text-lg font-semibold text-gray-900 ${inter.variable}`}>Custom Tall Loads</h3>
+                  <p className={`mt-2 text-base sm:text-lg text-gray-800 ${inter.variable}`}>Custom‑built trailers accommodate tall equipment and unique dimensions.</p>
                   <Link href="#contact" className="mt-2 inline-block text-sm text-sky-600 hover:underline">
                     Schedule Pickup →
                   </Link>
@@ -177,11 +177,11 @@ export default function Home() {
               </div>
             </div>
 
-            <hr className="mt-10 border-zinc-200/70 dark:border-zinc-800/60" />
+            <hr className="mt-10 border-zinc-200/70" />
 
             {/* Coverage Map Section */}
             <div className="mt-16 text-center">
-              <h3 className={`text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100 ${playfair.variable}`}>Coverage Area</h3>
+              <h3 className={`text-2xl sm:text-3xl font-bold mb-6 text-gray-900 ${playfair.variable}`}>Coverage Area</h3>
               <div className="w-full max-w-4xl mx-auto">
                 <Image
                   src="/transport-coverage-map.svg"
@@ -191,7 +191,7 @@ export default function Home() {
                   className="w-full h-auto mx-auto"
                   priority={false}
                 />
-                <p className={`mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 ${inter.variable}`}>
+                <p className={`mt-4 text-base sm:text-lg text-gray-800 ${inter.variable}`}>
                   Based in Savannah, GA — strong presence across the Southeast with long‑distance hauling available nationwide.
                 </p>
               </div>
@@ -199,20 +199,20 @@ export default function Home() {
 
             <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold ${inter.variable}`}>Warehouses</h4>
-                <p className="mt-2 text-gray-600 dark:text-gray-300">Forklifts, pallet jacks, and reach trucks for warehouse operations.</p>
+                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Warehouses</h4>
+                <p className="mt-2 text-gray-800">Forklifts, pallet jacks, and reach trucks for warehouse operations.</p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold ${inter.variable}`}>Retail & Distribution</h4>
-                <p className="mt-2 text-gray-600 dark:text-gray-300">Order pickers and material handling equipment for retail supply chains.</p>
+                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Retail & Distribution</h4>
+                <p className="mt-2 text-gray-800">Order pickers and material handling equipment for retail supply chains.</p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold ${inter.variable}`}>Construction</h4>
-                <p className="mt-2 text-gray-600 dark:text-gray-300">Custom trailers for tall loads and specialized industrial equipment.</p>
+                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Construction</h4>
+                <p className="mt-2 text-gray-800">Custom trailers for tall loads and specialized industrial equipment.</p>
               </div>
               <div className="p-6 rounded-xl bg-white shadow ring-1 ring-zinc-200">
-                <h4 className={`font-semibold ${inter.variable}`}>Long‑Distance Clients</h4>
-                <p className="mt-2 text-gray-600 dark:text-gray-300">Safe and insured transport for moves beyond the Southeast.</p>
+                <h4 className={`font-semibold text-gray-900 ${inter.variable}`}>Long‑Distance Clients</h4>
+                <p className="mt-2 text-gray-800">Safe and insured transport for moves beyond the Southeast.</p>
               </div>
             </div>
           </div>
