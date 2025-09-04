@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   title: "Specialized Transport | Savannah GA Hauling & Equipment Movers",
   description:
     "Based in Savannah, GA, Specialized Transport provides local and long-distance hauling with custom trailers for tall loads.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
