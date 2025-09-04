@@ -36,6 +36,9 @@ export default function RootLayout({
     <html lang="en" className="bg-gradient-to-b from-blue-50 via-white to-cyan-100 min-h-screen">
       <head>
         <meta name="color-scheme" content="light" />
+        <meta name="supported-color-schemes" content="light" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="darkreader-lock" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
