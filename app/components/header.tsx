@@ -97,25 +97,25 @@ export default function Header() {
       >
         <Link
           href="/"
-          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+          className="block text-gray-900 hover:text-blue-600"
         >
           Home
         </Link>
         <Link
           href="/services"
-          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+          className="block text-gray-900 hover:text-blue-600"
         >
           Services
         </Link>
         <Link
           href="/about"
-          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+          className="block text-gray-900 hover:text-blue-600"
         >
           About
         </Link>
         <Link
           href="/contact"
-          className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+          className="block text-gray-900 hover:text-blue-600"
         >
           Contact
         </Link>
