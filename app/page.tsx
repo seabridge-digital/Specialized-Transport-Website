@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         {/* Foreground content */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 w-full max-w-5xl mx-auto text-center">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 w-full max-w-5xl mx-auto text-center pt-24 sm:pt-32">
           <h1 className={`animate-fadeIn text-3xl sm:text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg text-center leading-tight md:leading-snug mb-4 break-words ${playfair.variable}`}>
             Specialized Transport
           </h1>
