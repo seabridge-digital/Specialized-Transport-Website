@@ -1,13 +1,14 @@
 "use client";
 
 import Slider from "react-slick";
+import { CustomArrowProps } from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = Array.from({ length: 17 }, (_, i) => `/gallery${i + 1}.png`);
 
-function NextArrow(props: any) {
+function NextArrow(props: CustomArrowProps) {
   const { onClick } = props;
   return (
     <div
@@ -19,7 +20,7 @@ function NextArrow(props: any) {
   );
 }
 
-function PrevArrow(props: any) {
+function PrevArrow(props: CustomArrowProps) {
   const { onClick } = props;
   return (
     <div
