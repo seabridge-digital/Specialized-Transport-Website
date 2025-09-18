@@ -1,5 +1,6 @@
 import { Playfair_Display, Inter } from "next/font/google";
 import Image from "next/image";
+import Gallery from "../components/gallery";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -60,6 +61,7 @@ export default function AboutPage() {
           </button>
         </form>
       </section>
+      <Gallery />
     </main>
   );
 }

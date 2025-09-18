@@ -23,20 +23,19 @@ export default function Header() {
     >
       <div
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center transition-all duration-300 ${
-          scrolled ? "h-12" : "h-16"
+          scrolled ? "h-20" : "h-20"
         }`}
       >
         <div className="flex justify-between items-center w-full">
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/ST-logo-only-svg.svg"
+              src="/ST_Logo_Transparent_Background.png"
               alt="Specialized Transport Logo"
-              width={50}
-              height={50}
-              className={`cursor-pointer transition-all duration-300 ${
-                scrolled ? "w-10 h-10" : "w-12 h-12"
-              }`}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-12 h-auto sm:w-16 md:w-20"
             />
           </Link>
 

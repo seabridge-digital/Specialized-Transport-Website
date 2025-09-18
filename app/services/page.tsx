@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
+import Gallery from "../components/gallery";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -106,6 +107,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <Gallery />
     </main>
   );
 }

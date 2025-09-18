@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
 import { useState, useEffect } from "react";
+import Gallery from "./components/gallery";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -222,7 +223,8 @@ export default function Home() {
       <div className="relative w-full h-16">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white" />
       </div>
-
+      
+      <Gallery />
       <section id="about" className="w-full bg-gray-50 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg p-8">
