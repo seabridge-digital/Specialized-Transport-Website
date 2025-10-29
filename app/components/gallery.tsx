@@ -6,7 +6,7 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = Array.from({ length: 17 }, (_, i) => `/gallery${i + 1}.png`);
+const images = Array.from({ length: 22 }, (_, i) => `/gallery${i + 1}.png`);
 
 function NextArrow(props: CustomArrowProps) {
   const { onClick } = props;
