@@ -57,6 +57,15 @@ export default function RootLayout({
             gtag('config', 'AW-17731137963');
           `}
         </Script>
+
+        {/* Phone call conversion event for Call (405-413-6077) */}
+        <Script id="phone-call-event" strategy="afterInteractive">
+          {`
+            gtag('config', 'AW-17731137963/9DqmCP2Y08AbEKvj7oZC', {
+              'phone_conversion_number': '405-413-6077'
+            });
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
