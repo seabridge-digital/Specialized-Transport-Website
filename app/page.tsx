@@ -65,7 +65,7 @@ export default function Home() {
               href="tel:4054136077"
               className="px-6 py-3 rounded-lg bg-sky-600 text-white font-semibold shadow hover:bg-sky-700 hover:scale-105 transition"
             >
-              Call Now to Schedule
+              Call 405-413-6077
             </a>
             <a
               href="mailto:specialized.transport@yahoo.com"
